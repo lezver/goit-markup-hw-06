@@ -26,12 +26,10 @@
         <nav class="nav">
           <ul class="nav-items list-style">
             <li class="nav-item">
-              <a class="nav-link link" href="./index.html">Studio</a>
+              <a class="nav-link link active" href="./index.html">Studio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link link active" href="./portfolio.html"
-                >Portfolio</a
-              >
+              <a class="nav-link link" href="./portfolio.html">Portfolio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link link" href="#">Contacts</a>
@@ -47,7 +45,7 @@
               rel=" noopener , nofollow , noreferrer"
             >
               <svg width="19" height="19">
-                <use href="./images/icons.svg#icon-contact-mail"></use>
+                <use href="./images/icons.svg#icon-mail"></use>
               </svg>
               info@devstudio.com
             </a>
@@ -55,7 +53,7 @@
           <li class="contacts-item">
             <a class="contacts-link link" href="tel:+110001111111">
               <svg width="19" height="19">
-                <use href="./images/icons.svg#icon-contact-mobile"></use>
+                <use href="./images/icons.svg#icon-phone"></use>
               </svg>
               +11 (000) 111-11-11
             </a>
@@ -67,7 +65,7 @@
       <!--  portfolio  -->
       <section class="portfolio">
         <div class="container">
-          <h1 class="portfolio-titel" hidden>Portfolio</h1>
+          <h1 class="portfolio-titel visually-hidden">Portfolio</h1>
           <ul class="portfolio-filter-items list-style">
             <li class="portfolio-filter-item">
               <button class="portfolio-btn basic-btn" type="button">All</button>
@@ -341,6 +339,21 @@
             </li>
           </ul>
         </div>
+        <form class="footer-form">
+          <p>Subscribe</p>
+          <fieldset>
+            <label class="footer-form-label">
+              <input type="email" placeholder=" " name="email" required />
+              <span>E-mail</span>
+            </label>
+            <button class="footer-form-btn basic-btn" type="submit">
+              <span>Subscribe</span>
+              <svg widht="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </fieldset>
+        </form>
       </div>
     </footer>
     <script src="./js/modal.js"></script>

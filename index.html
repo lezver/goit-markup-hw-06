@@ -45,7 +45,7 @@
               rel=" noopener , nofollow , noreferrer"
             >
               <svg width="19" height="19">
-                <use href="./images/icons.svg#icon-contact-mail"></use>
+                <use href="./images/icons.svg#icon-mail"></use>
               </svg>
               info@devstudio.com
             </a>
@@ -53,7 +53,7 @@
           <li class="contacts-item">
             <a class="contacts-link link" href="tel:+110001111111">
               <svg width="19" height="19">
-                <use href="./images/icons.svg#icon-contact-mobile"></use>
+                <use href="./images/icons.svg#icon-phone"></use>
               </svg>
               +11 (000) 111-11-11
             </a>
@@ -77,7 +77,7 @@
       <!--  Why we?  -->
       <section class="why-we">
         <div class="container">
-          <h2 class="why-we-titel" hidden>Why we?</h2>
+          <h2 class="why-we-titel visually-hidden">Why we?</h2>
           <ul class="why-we-items list-style">
             <li class="why-we-item">
               <div class="why-we-img">
@@ -575,6 +575,21 @@
             </li>
           </ul>
         </div>
+        <form class="footer-form">
+          <p>Subscribe</p>
+          <fieldset>
+            <label class="footer-form-label">
+              <input type="email" placeholder=" " name="email" required />
+              <span>E-mail</span>
+            </label>
+            <button class="footer-form-btn basic-btn" type="submit">
+              <span>Subscribe</span>
+              <svg widht="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </fieldset>
+        </form>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -584,6 +599,68 @@
             <use href="./images/icons.svg#icon-modal-close-btn"></use>
           </svg>
         </button>
+        <form class="modal-form">
+          <fieldset class="modal-form-fieldset">
+            <legend class="modal-form-legend">
+              Leave your contacts and we will call you back
+            </legend>
+            <label class="modal-form-label">
+              <input
+                type="text"
+                name="user_name"
+                placeholder=" "
+                required
+                pattern="^[a-zA-Z]+$"
+              />
+              <span class="modal-form-label-name">Name</span>
+              <svg width="12" height="12">
+                <use href="./images/icons.svg#icon-user"></use>
+              </svg>
+            </label>
+            <label class="modal-form-label">
+              <input
+                type="tel"
+                name="user_phone"
+                placeholder=" "
+                required
+                pattern="[+0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                title="+380-000-00-00"
+              />
+              <span class="modal-form-label-phone">Phone</span>
+              <svg width="12" height="12">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </label>
+            <label class="modal-form-label mb-none">
+              <input
+                type="email"
+                name="user_email"
+                placeholder=" "
+                required
+                title="your@mail.com"
+              />
+              <span class="modal-form-label-email">Email</span>
+              <svg width="12" height="12">
+                <use href="./images/icons.svg#icon-mail"></use>
+              </svg>
+            </label>
+            <lebel class="modal-form-textarea">
+              <span>Comment</span>
+              <textarea name="user_text" placeholder="text input"></textarea>
+            </lebel>
+          </fieldset>
+          <label class="modal-form-checkbox">
+            <input class="visually-hidden" type="checkbox" name="user_policy" />
+            <p>
+              I accept the terms and conditions of the &nbsp;
+              <a href="">Privacy Policy</a>
+            </p>
+            <svg width="10" hieght="8">
+              <use href="./images/icons.svg#icon-click"></use>
+            </svg>
+          </label>
+          <button class="modal-form-btn basic-btn">send</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>

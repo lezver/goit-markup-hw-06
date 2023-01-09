@@ -9,7 +9,9 @@
   --cloud: #f4f4fd;
   --grey: #2e2f42b2;
   --modal-background: #fcfcfc;
+  --white-color: white;
   --time-distribution: cubic-bezier(0.4, 0, 0.2, 1);
+  --all-gap: 24px;
 }
 
 body {
@@ -26,7 +28,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+fieldset {
   margin: 0;
   padding: 0;
 }
@@ -63,9 +66,19 @@ svg {
   margin: 0 auto;
   padding: 0 15px;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 /* ==================== HEADER ==================== */
 .header {
-  background: #fff;
+  background: var(--white-color);
   border-bottom: 1px solid var(--cornflower);
 }
 .header-flex {
@@ -169,11 +182,11 @@ svg {
   line-height: 1.07;
   margin-bottom: 48px;
 
-  color: #fff;
+  color: var(--white-color);
 }
 .hero-btn {
   background-color: var(--iris);
-  color: #fff;
+  color: var(--white-color);
   padding: 16px 32px;
   margin: 0 auto;
   box-shadow: 0px 4px 4px 0px #00000026;
@@ -190,7 +203,7 @@ svg {
 .why-we-items {
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: var(--all-gap);
   flex-wrap: wrap;
 }
 .why-we-item {
@@ -236,7 +249,7 @@ svg {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: var(--all-gap);
 }
 .what-are-we-doing-item {
   position: relative;
@@ -252,7 +265,7 @@ svg {
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--white-color);
   background-color: var(--grey);
   transform: translatey(100%);
   transition: transform 250ms var(--time-distribution);
@@ -276,7 +289,7 @@ svg {
 .our-team-items {
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: var(--all-gap);
   flex-wrap: wrap;
 }
 .our-team-item {
@@ -286,7 +299,7 @@ svg {
 }
 .our-team-box {
   padding: 32px 16px;
-  background: #fff;
+  background: var(--white-color);
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 }
@@ -334,7 +347,7 @@ svg {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: var(--all-gap);
 }
 .customers-link {
   display: flex;
@@ -365,7 +378,7 @@ svg {
 .portfolio-filter-items {
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: var(--all-gap);
   margin-bottom: 72px;
 }
 .portfolio-btn {
@@ -379,14 +392,14 @@ svg {
 .portfolio-btn:hover,
 .portfolio-btn:focus {
   background: var(--ocean);
-  color: #fff;
+  color: var(--white-color);
 }
 .portfolio-items {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   row-gap: 48px;
-  column-gap: 24px;
+  column-gap: var(--all-gap);
 }
 .portfolio-item {
   max-width: 360px;
@@ -443,7 +456,6 @@ svg {
 .footer-text {
   display: flex;
   flex-direction: column;
-  margin-right: 120px;
 }
 .logo.footer-logo {
   color: var(--cloud);
@@ -454,12 +466,16 @@ svg {
   color: var(--cornflower);
   max-width: 264px;
 }
+.footer-social-media {
+  margin-right: 80px;
+  margin-left: 120px;
+}
 .footer-titel {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #fff;
+  color: var(--white-color);
   margin-bottom: 16px;
 }
 .footer-items {
@@ -480,6 +496,68 @@ svg {
 .footer-link:focus {
   background: var(--green);
 }
+.footer-form > p {
+  font-weight: 500;
+  color: var(--white-color);
+  margin-bottom: 16px;
+}
+.footer-form > fieldset {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--all-gap);
+  border: none;
+}
+.footer-form-label {
+  position: relative;
+}
+.footer-form-label > input {
+  background: transparent;
+  border: 1px solid #ffffff4d;
+  outline: none;
+  box-shadow: 0px 4px 4px 0px #00000026;
+  width: 264px;
+  height: 40px;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: #ffffff99;
+}
+.footer-form-label > span {
+  position: absolute;
+  top: 11px;
+  left: 17px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: #ffffff99;
+  transition: transform 250ms var(--time-distribution);
+}
+.footer-form-label > input:focus + span,
+.footer-form-label > input:not(:placeholder-shown) + span {
+  transform: translate(10%, -160%);
+  color: var(--cloud);
+}
+.footer-form-btn {
+  display: flex;
+  background-color: var(--iris);
+  padding: 8px 24px;
+  box-shadow: 0px 4px 4px 0px #00000026;
+  transition: background 250ms var(--time-distribution);
+}
+.footer-form-btn:hover,
+.footer-form-btn:focus {
+  background-color: var(--ocean);
+}
+.footer-form-btn > span {
+  margin-right: 16px;
+  font-weight: 500;
+  color: var(--white-color);
+}
+.footer-form-btn > svg {
+  width: 24px;
+  fill: var(--white-color);
+}
 /* ====================  backdrop  ==================== */
 .backdrop {
   position: fixed;
@@ -492,7 +570,7 @@ svg {
   transition: opacity 250ms var(--time-distribution),
     visibility 250ms var(--time-distribution);
 }
-.backdrop.is-hidden {
+.is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
@@ -503,6 +581,7 @@ svg {
   top: 50%;
   width: 408px;
   height: 576px;
+  padding: 70px 24px 24px;
   transform: translate(-50%, -50%) scale(1);
   background-color: var(--modal-background);
   border-radius: 4px;
@@ -541,5 +620,153 @@ svg {
 }
 .modal-close-btn:hover > svg,
 .modal-close-btn:focus > svg {
-  fill: #fff;
+  fill: var(--white-color);
+}
+.modal-form-fieldset {
+  margin-bottom: 16px;
+  border: none;
+}
+.modal-form-legend {
+  color: var(--navy-blue);
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 29px;
+}
+.modal-form-label {
+  position: relative;
+  display: block;
+  margin-bottom: 26px;
+}
+.modal-form-label.mb-none {
+  margin-bottom: 8px;
+}
+.modal-form-label > input {
+  width: 100%;
+  padding: 11px 38px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  border: 1px solid #21212133;
+  border-radius: 4px;
+  outline: none;
+  transition: border 250ms var(--time-distribution);
+}
+.modal-form-label > svg {
+  position: absolute;
+  left: 8%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  fill: var(--navy-blue);
+  transition: fill 250ms var(--time-distribution);
+}
+.modal-form-label > span {
+  position: absolute;
+  left: 16%;
+  top: 50%;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  color: var(--light-slate);
+  transform: translate(-50%, -50%);
+  transition: transform 250ms var(--time-distribution);
+}
+.modal-form-label > input:focus {
+  border: 1px solid var(--iris);
+}
+.modal-form-label > input:focus + span,
+.modal-form-label > input:not(:placeholder-shown) + span {
+  transform: translate(-165%, -220%);
+}
+.modal-form-label > input:focus + .modal-form-label-phone {
+  transform: translate(-155%, -220%);
+}
+.modal-form-label > input:focus + .modal-form-label-email {
+  transform: translate(-175%, -220%);
+}
+.modal-form-label > input:focus ~ svg {
+  fill: var(--iris);
+}
+.modal-form-textarea {
+  display: flex;
+  flex-direction: column;
+}
+.modal-form-textarea > span {
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  color: var(--light-slate);
+}
+.modal-form-textarea > textarea {
+  resize: none;
+  width: 100%;
+  height: 120px;
+  padding: 8px 16px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  border: 1px solid #21212133;
+  border-radius: 4px;
+  outline: none;
+  transition: border 250ms var(--time-distribution);
+}
+.modal-form-textarea > textarea::placeholder {
+  color: #75757580;
+}
+.modal-form-textarea > textarea:focus {
+  border-color: var(--iris);
+}
+.modal-form-checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+.modal-form-checkbox > p {
+  display: flex;
+}
+.modal-form-checkbox > p::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border: 1px solid var(--navy-blue);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 250ms var(--time-distribution),
+    border 250ms var(--time-distribution);
+}
+.modal-form-checkbox > svg {
+  position: absolute;
+  left: 3px;
+  top: 4px;
+  width: 10px;
+  height: 8px;
+  fill: var(--white-color);
+  cursor: pointer;
+}
+.modal-form-checkbox > input:checked + p::before,
+.modal-form-checkbox > input:checked + svg {
+  background-color: var(--ocean);
+  border-color: var(--ocean);
+  fill: var(--cloud);
+}
+.modal-form-checkbox a {
+  color: var(--iris);
+  transition: color 250ms var(--time-distribution);
+}
+.modal-form-checkbox a:hover,
+.modal-form-checkbox a:focus {
+  color: var(--ocean);
+}
+.modal-form-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 16px 65px;
+  background-color: var(--iris);
+  color: var(--white-color);
+  box-shadow: 0px 4px 4px 0px #00000026;
+  transition: background 250ms var(--time-distribution);
+}
+.modal-form-btn:hover,
+.modal-form-btn:focus {
+  background-color: var(--ocean);
 }
