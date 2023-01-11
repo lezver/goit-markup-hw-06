@@ -371,6 +371,30 @@ svg {
 .customers-link:focus > svg {
   fill: var(--ocean);
 }
+.customers-one {
+  width: 41px;
+  height: 47px;
+}
+.customers-two {
+  width: 40px;
+  height: 52px;
+}
+.customers-three {
+  width: 44px;
+  height: 41px;
+}
+.customers-four {
+  width: 84px;
+  height: 80px;
+}
+.customers-five {
+  width: 63px;
+  height: 56px;
+}
+.customers-six {
+  width: 94px;
+  height: 88px;
+}
 /* ==================== Portfolio ==================== */
 .portfolio {
   padding: 96px 0 120px;
@@ -556,6 +580,7 @@ svg {
 }
 .footer-form-btn > svg {
   width: 24px;
+  height: 24px;
   fill: var(--white-color);
 }
 /* ====================  backdrop  ==================== */
