@@ -745,10 +745,10 @@ svg {
   font-size: 12px;
   letter-spacing: 0.04em;
 }
-.modal-form-checkbox > p {
+.modal-form-checkbox > span {
   display: flex;
 }
-.modal-form-checkbox > p::before {
+.modal-form-checkbox > span::before {
   content: '';
   display: block;
   width: 16px;
@@ -769,7 +769,7 @@ svg {
   fill: var(--white-color);
   cursor: pointer;
 }
-.modal-form-checkbox > input:checked + p::before,
+.modal-form-checkbox > input:checked + span::before,
 .modal-form-checkbox > input:checked + svg {
   background-color: var(--ocean);
   border-color: var(--ocean);
